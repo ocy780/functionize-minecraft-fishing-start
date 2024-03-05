@@ -44,6 +44,7 @@ function fishBtnClicked() {
       numPufferSpan.innerHTML = numPuffer;
       resultImg.src = 'img/Pufferfish.png';
     }
+
   } else if (character === 'alex') {
     // ALEX: Cod 10%, Salmon 10%, Tropical 30%, Puffer 50%
     let randNum = Math.random();
@@ -63,6 +64,20 @@ function fishBtnClicked() {
       numPuffer++;
       numPufferSpan.innerHTML = numPuffer;
       resultImg.src = 'img/Pufferfish.png';
+    }
+  } else if (character === 'villager') {
+    // Villager: Cod 25%, Salmon 25%, Tropical 25%, Puffer 25%
+    let villager = fish();
+  }
+  function fish() {
+    if (Math.random() < 0.25) {
+      return "Tropical Fish";
+    } else if (Math.random() < 0.5) {
+      return "Raw Salmon";
+    } else if (Math.random() < 0.75) {
+      return "Raw Cod";
+    } else {
+      return "Pufferfish";
     }
   }
 }
